@@ -4,11 +4,9 @@ async function sendScript(scriptText){
 	main = document.querySelector("#main"),
 	textarea = main.querySelector(`div[contenteditable="true"]`)
 	
-	if(!textarea) throw new Error("Não há uma conversa aberta")
+	if(!textarea) throw new Error("not an open conversation")
 	
 	for(const line of lines){
-		console.log(line)
-	
 		textarea.focus();
 		document.execCommand('insertText', false, line);
 		textarea.dispatchEvent(new Event('change', {bubbles: true}));
