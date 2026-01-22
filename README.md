@@ -1,1 +1,1 @@
-Auto sender for whats-app
+Auto message sender for whats-app
